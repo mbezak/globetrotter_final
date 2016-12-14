@@ -1,3 +1,6 @@
+/**
+ * @author Teresa Sorbera
+ */
 import {GenericData} from "../../genericframework/generic.data";
 
 export class ETotalData extends GenericData {

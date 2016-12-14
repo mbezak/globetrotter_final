@@ -1,3 +1,6 @@
+/**
+ * @author Edilion devs
+ */
 import {Component} from "@angular/core";
 import {GenericView} from "../../genericframework/generic.view";
 import {EImageData} from "./e-image.data";

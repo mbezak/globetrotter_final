@@ -1,3 +1,6 @@
+/**
+ * @author Cristiana Man
+ */
 import {Component} from "@angular/core";
 import {EGridData} from "./e-grid.data";
 import {GenericView} from "../../genericframework/generic.view";

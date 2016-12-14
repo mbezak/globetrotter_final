@@ -1,3 +1,6 @@
+/**
+ * @author Teresa Sorbera
+ */
 import {GenericComponent} from "../../genericframework/generic.component";
 
 import {EExpenseTileData} from "./e-expense-tile.data";

@@ -1,3 +1,6 @@
+/**
+ * @author Edilion devs
+ */
 import {GenericData} from "../../genericframework/generic.data";
 
 export class EButtonData extends GenericData {

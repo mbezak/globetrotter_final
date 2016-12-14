@@ -1,4 +1,6 @@
-/** @author Cristiana Man */
+/**
+ * @author Cristiana Man
+ */
 import {Component} from "@angular/core";
 import {GenericView} from "../../genericframework/generic.view";
 import {ESwiperData} from "./e-swiper.data";

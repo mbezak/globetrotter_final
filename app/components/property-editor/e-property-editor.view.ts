@@ -1,3 +1,6 @@
+/**
+ * @author Cristiana Man
+ */
 import {Component}  from '@angular/core';
 import { EPropertyEditorData } from "./e-property-editor.data";
 import {GenericView} from "../../genericframework/generic.view";

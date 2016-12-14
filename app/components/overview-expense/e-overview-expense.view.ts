@@ -1,4 +1,6 @@
-
+/**
+ * @author Teresa Sorbera
+ */
 import { Component } from '@angular/core';
 
 import { EOverviewExpenseData } from "./e-overview-expense.data";

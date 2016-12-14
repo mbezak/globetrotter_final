@@ -1,3 +1,6 @@
+/**
+ * @author Edilion devs, modified by Matt Bezak
+ */
 import {Component, ViewChild, ViewContainerRef, OnInit} from "@angular/core";
 import {ELayoutData} from "./e-layout.data";
 import {GenericView} from "../../genericframework/generic.view";

@@ -1,3 +1,6 @@
+/**
+ * @author Teresa Sorbera
+ */
 import { Component } from '@angular/core';
 
 import { EExpenseTileData } from "./e-expense-tile.data";

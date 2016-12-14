@@ -1,3 +1,6 @@
+/**
+ * @author Cristiana Man
+ */
 import {GenericContainerData} from "../../genericframework/generic-container/generic-container.data";
 import {EComponent} from "../../genericframework/e.component";
 

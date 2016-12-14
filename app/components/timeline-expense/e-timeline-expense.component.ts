@@ -1,3 +1,6 @@
+/**
+ * @author Cristiana Man
+ */
 import {GenericComponent} from "../../genericframework/generic.component";
 
 import {ETimelineExpenseData} from "./e-timeline-expense.data";

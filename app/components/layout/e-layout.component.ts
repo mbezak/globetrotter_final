@@ -1,3 +1,6 @@
+/**
+ * @author Edilion devs
+ */
 import {ELayoutView} from "./e-layout.view";
 import {ELayoutData} from "./e-layout.data";
 import {GenericContainerComponent} from "../../genericframework/generic-container/generic-container.component";

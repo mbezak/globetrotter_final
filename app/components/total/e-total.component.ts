@@ -1,3 +1,6 @@
+/**
+ * @author Teresa Sorbera
+ */
 import {GenericComponent} from "../../genericframework/generic.component";
 
 import {ETotalData} from "./e-total.data";

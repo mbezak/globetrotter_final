@@ -1,3 +1,6 @@
+/**
+ * @author Cristiana Man
+ */
 import { Component } from '@angular/core';
 import { ETimelineExpenseData } from "./e-timeline-expense.data";
 import { GenericView } from "../../genericframework/generic.view";

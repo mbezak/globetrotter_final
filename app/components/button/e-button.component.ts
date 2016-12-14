@@ -1,3 +1,6 @@
+/**
+ * @author Edilion devs
+ */
 import {GenericComponent} from "../../genericframework/generic.component";
 import {EButtonData} from "./e-button.data";
 import {EButtonView} from "./e-button.view";

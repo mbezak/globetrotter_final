@@ -1,3 +1,6 @@
+/**
+ * @author Teresa Sorbera
+ */
 import { Component } from '@angular/core';
 
 import { ETotalData } from "./e-total.data";

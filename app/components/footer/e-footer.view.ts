@@ -1,3 +1,6 @@
+/**
+ * @author Matt Bezak
+ */
 import {Component} from "@angular/core";
 
 import {EFooterData} from "./e-footer.data";

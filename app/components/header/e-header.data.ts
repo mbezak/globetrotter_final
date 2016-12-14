@@ -1,3 +1,6 @@
+/**
+ * @author Matt Bezak
+ */
 import {GenericData} from "../../genericframework/generic.data";
 
 export class EHeaderData extends GenericData {

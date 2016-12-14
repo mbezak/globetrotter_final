@@ -1,3 +1,6 @@
+/**
+ * @author Cristiana Man
+ */
 import {GenericData} from "../../genericframework/generic.data";
 
 export class ETimelineExpenseData extends GenericData {

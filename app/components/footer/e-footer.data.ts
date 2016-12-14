@@ -1,3 +1,6 @@
+/**
+ * @author Matt Bezak
+ */
 import {EComponent} from "../../genericframework/e.component";
 import {GenericContainerData} from "../../genericframework/generic-container/generic-container.data";
 

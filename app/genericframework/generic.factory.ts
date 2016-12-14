@@ -1,7 +1,7 @@
 /**
  * @author Edilion devs
  */
-import {Injectable, ComponentFactoryResolver, ComponentFactory, Compiler} from "@angular/core";
+import {Injectable, ComponentFactory, Compiler} from "@angular/core";
 
 import {EComponent} from "./e.component";
 import {ETestComponent} from "../components/test/e-test.component";
@@ -26,9 +26,6 @@ import {EIconComponent} from "../components/icon/e-icon.component";
 import {EImageComponent} from "../components/image/e-image.component";
 import {EImageData} from "../components/image/e-image.data";
 import {EImageView} from "../components/image/e-image.view";
-import {ELayoutGridView} from "../components/layout-grid/e-layout-grid.view";
-import {ELayoutGridComponent} from "../components/layout-grid/e-layout-grid.component";
-import {ELayoutGridData} from "../components/layout-grid/e-layout-grid.data";
 import {EExpenseTileView} from "../components/expense-tile/e-expense-tile.view";
 import {EExpenseTileComponent} from "../components/expense-tile/e-expense-tile.component";
 import {EExpenseTileData} from "../components/expense-tile/e-expense-tile.data";
@@ -118,13 +115,6 @@ export class GenericFactory {
                     controller: this.controller,
                     data: new ELayoutData(),
                     factory: this.createLayoutFactory()
-                });
-
-            case "layout-grid"           :
-                return new ELayoutGridComponent({
-                    controller: this.controller,
-                    data: new ELayoutGridData(),
-                    factory: this.createLayoutGridFactory()
                 });
 
             case "layout-vertical"       :
@@ -294,14 +284,6 @@ export class GenericFactory {
         return this.componentResolver
             .compileComponentAsync(ELayoutView)
             .then((factory: ComponentFactory<ELayoutView>) => {
-                return factory;
-            });
-    }
-
-    private createLayoutGridFactory(): Promise <ComponentFactory <ELayoutGridView>> {
-        return this.componentResolver
-            .compileComponentAsync(ELayoutGridView)
-            .then((factory: ComponentFactory<ELayoutGridView>) => {
                 return factory;
             });
     }
