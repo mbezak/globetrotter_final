@@ -1,0 +1,92 @@
+.e-property-editor .property-group {
+  margin: 20px;
+}
+.e-property-editor .e-property-label {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  text-transform: uppercase;
+  font-size: 75%;
+  padding-left: 20px;
+  line-height: 27px;
+}
+.e-property-editor input,
+.e-property-editor textarea,
+.e-property-editor select {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  font-size: 100%;
+}
+.e-property-editor input,
+.e-property-editor select {
+  border-radius: 30px;
+  padding: 5px 20px;
+  border: 0 !important;
+  box-shadow: 3px 3px 3px #dddddd;
+  outline: none;
+  margin: 0;
+  width: 100%;
+  height: 30px;
+  -webkit-transition: all 0.1s ease-in-out;
+  -moz-transition: all 0.1s ease-in-out;
+  -ms-transition: all 0.1s ease-in-out;
+  -o-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
+}
+.e-property-editor input:hover,
+.e-property-editor select:hover {
+  background-color: #1389c8;
+  color: #ffffff;
+}
+.e-property-editor input:focus,
+.e-property-editor select:focus {
+  background-color: #145a7d;
+  color: #ffffff;
+}
+.e-property-editor input:disabled,
+.e-property-editor select:disabled {
+  background: #e6e6e6 !important;
+  color: #808080 !important;
+}
+.e-property-editor .e-property-checkbox {
+  display: block;
+  width: 25px;
+}
+.e-property-editor .e-dropdown-panel {
+  float: left;
+}
+.e-property-editor .e-dropdown-panel .dropdown i {
+  color: #1389c8;
+  margin: 5px 0 0 20px;
+}
+.e-property-editor .e-dropdown-panel .dropdown .dropdown-content {
+  left: 20px;
+}
+@media (min-width: 710px) {
+  .e-horizontal .property-group {
+    min-height: 35px;
+    display: block;
+    margin-bottom: 15px;
+  }
+  .e-horizontal .property-group .e-property-label {
+    width: 230px;
+    float: left;
+    padding-left: 5px;
+  }
+  .e-horizontal .property-group input,
+  .e-horizontal .property-group select {
+    overflow: auto;
+    max-width: 400px;
+    float: left;
+  }
+  .e-horizontal .property-group .e-property-checkbox {
+    float: left;
+  }
+}

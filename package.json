@@ -1,0 +1,56 @@
+{
+  "name": "GFE",
+  "version": "1.0.0",
+  "description": "Generic Front End for Edilion",
+  "main": "index.js",
+  "scripts": {
+    "start": "tsc && concurrently \"npm run tsc:w\" \"npm run lite\" ",
+    "lite": "lite-server",
+    "postinstall": "typings install",
+    "tsc": "tsc",
+    "tsc:w": "tsc -w",
+    "typings": "typings",
+    "lite-server-test": "lite-server --config=liteserver-test-config.json",
+    "test": "tsc && concurrently \"npm run tsc:w\" \"npm run lite-server-test\" "
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://bitbucket.org/mancristiana/edilliongfe.git"
+  },
+  "author": "Cristiana Man",
+  "license": "ISC",
+  "homepage": "https://www.edilion.com/",
+  "dependencies": {
+    "@angular/common": "2.0.0-rc.5",
+    "@angular/compiler": "2.0.0-rc.5",
+    "@angular/compiler-cli": "0.5.0",
+    "@angular/core": "2.0.0-rc.5",
+    "@angular/forms": "0.3.0",
+    "@angular/http": "2.0.0-rc.5",
+    "@angular/platform-browser": "2.0.0-rc.5",
+    "@angular/platform-browser-dynamic": "2.0.0-rc.5",
+    "@angular/router": "3.0.0-rc.1",
+    "@angular/upgrade": "2.0.0-rc.5",
+    "angular2-in-memory-web-api": "0.0.17",
+    "bootstrap": "^3.3.6",
+    "codemirror": "^5.17.0",
+    "core-js": "^2.4.0",
+    "font-awesome": "^4.6.3",
+    "hammer-touchemulator": "0.0.2",
+    "hammerjs": "^2.0.8",
+    "jsonpath": "0.2.7",
+    "ng2-codemirror": "^0.1.0",
+    "ng2-file-upload": "^1.1.2",
+    "reflect-metadata": "^0.1.3",
+    "rxjs": "5.0.0-beta.6",
+    "systemjs": "0.19.27",
+    "zone.js": "^0.6.12"
+  },
+  "devDependencies": {
+    "concurrently": "^2.2.0",
+    "jasmine-core": "2.5.1",
+    "lite-server": "^2.2.2",
+    "typescript": "^1.8.10",
+    "typings": "^1.3.2"
+  }
+}

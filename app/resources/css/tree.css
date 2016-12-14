@@ -1,0 +1,12 @@
+.tree .branch-name {
+  cursor: default;
+  color: #8ebf2c;
+}
+.tree .branch {
+  border-left: 1px dotted #8ebf2c;
+  padding-left: 20px;
+}
+.tree ul {
+  list-style: none;
+  padding-left: 0px;
+}

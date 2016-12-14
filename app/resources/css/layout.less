@@ -1,0 +1,176 @@
+@import "variables.less";
+@import "mixins.less";
+
+.e-container {
+  overflow: auto;
+  //margin: 10px;
+  &:after {
+    display: block;
+    clear: both;
+  }
+}
+
+.e-has-header {
+  padding-top: @size-header;
+}
+
+.e-has-footer {
+  padding-bottom: @size-footer;
+}
+
+.e-content {
+  .box-sizing();
+  .nospace();
+  @media (min-width: @size-desktop) {
+    //margin: 5px;
+    //padding: 15px;
+  }
+}
+
+.e-responsive {
+  overflow-x: auto
+}
+
+.e-row {
+  float: left;
+  width: 100%;
+  .box-sizing();
+
+  &:after {
+    display: table;
+    clear: both;
+  }
+}
+
+.e-col-generator(@cols, s);
+
+@media only screen and (min-width: @size-tablet) {
+  .e-col-generator(@cols, m);
+}
+
+@media only screen and (min-width: @size-desktop) {
+  .e-col-generator(@cols, l);
+}
+
+.e-col-generator(@counter, @prefix) when (@counter > 0) {
+  .e-col-generator((@counter - 1), @prefix); // next iteration
+  // code for each iteration
+  .e-col-@{prefix}@{counter} {
+    float: left;
+    width: @counter / @cols * @size-max;
+  }
+}
+
+.e-col {
+  display: inline-block;
+}
+
+.e-rest {
+  overflow: hidden
+}
+
+.e-align-left {
+  text-align: left;
+}
+
+.e-align-center {
+  text-align: center;
+}
+
+.e-align-right {
+  text-align: right;
+}
+
+/*.e-center {
+  display:flex;
+  justify-content:center;
+  align-items:center;
+
+}
+*/
+
+.e-layout-grid {
+  width: 100%;
+
+  .e-change-view-icon {
+    height: 30px;
+    width: 30px;
+    float: right;
+    padding-top: 50px;
+  }
+
+
+  .e-grid-element-short {
+    display: inline-block;
+  }
+
+  .e-grid-element-long {
+    display: block;
+  }
+
+  .e-grid-margin {
+    .box-sizing();
+    margin: 10px;
+  }
+
+  .centered {
+    margin: auto;
+    .box-sizing();
+    width: 330px;
+
+    @media only screen and (min-width: @size-tablet) {
+      width: 500px;
+    }
+    @media only screen and (min-width: @size-desktop) {
+      width: 700px;
+    }
+
+  }
+}
+
+.e-vertical-layout-grid {
+  overflow: auto;
+
+  .e-expense-wrapper {
+    .box-sizing();
+    //margin: 0 auto;
+    //width: 80%;
+    //border: 1px solid @theme-gray;
+    display: block;
+
+
+    .e-layout-vertical-container {
+      display: block;
+
+    }
+  }
+}
+
+
+  .e-wide {
+    width: 100%;
+  }
+
+  .e-text {
+    margin-left: 15px;
+    padding-top: 25px;
+  }
+
+
+
+.e-header-fixed {
+  position: fixed;
+  top: 0;
+  width: 100%;
+
+}
+
+.e-footer-fixed {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+
+
+

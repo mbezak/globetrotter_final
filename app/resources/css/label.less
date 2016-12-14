@@ -1,0 +1,29 @@
+@import "variables";
+@import "mixins";
+
+.e-text {}
+
+.e-label-error, .e-label-warn, .e-label-info {
+  font-size: 14px;
+  color: @theme-white;
+  .radius();
+
+  a {
+    color: @theme-white !important;
+    &:hover {
+      color: darken(@theme-white, 20%) !important;
+    }
+  }
+}
+
+.e-label-error {
+   background-color: @theme-error;
+}
+
+.e-label-warn {
+  background-color: @theme-warn;
+}
+
+.e-label-info {
+  background-color: @theme-info;
+}

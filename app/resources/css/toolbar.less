@@ -1,0 +1,112 @@
+@import "variables";
+@import "mixins";
+
+.e-toolbar {
+
+  img, .e-text, button, .btn {
+      cursor: pointer !important;
+  }
+
+  .wrap-base(@bg; @color) {
+    height: @size-toolbar;
+    padding: 0 15px 0 5px;
+
+    background-color: @bg;
+    color: @color;
+
+    a:link, a:visited {
+      color: @color;
+      text-decoration: none;
+    }
+
+    a:hover, a:active {
+      color: lighten(@color, 20%);
+    }
+  }
+
+  .e-logo-wrap {
+    .wrap-base(@theme-white; @theme-primary);
+  }
+  .e-tool-wrap {
+    .wrap-base(@theme-primary; @theme-white);
+  }
+  .e-filter-wrap {
+    .wrap-base(@theme-light-gray; @theme-dark);
+    //border-bottom: 2px solid @theme-gray;
+  }
+
+  .e-filter-content {
+    display: inline-block;
+    float: left;
+    padding: 20px;
+
+    button {
+      .e-button-style();
+    }
+
+  }
+
+  .e-toolbar-content {
+    display: inline-block;
+    padding: 10px 5px 5px 5px;
+
+    img {
+      height: @size-toolbar * 0.65;
+      width: auto;
+    }
+
+    .e-text {
+      padding-top: 8px;
+      font-size: 20px;
+    }
+
+    .btn {
+      display: inline-block !important;
+      margin: 0 !important;
+      margin-top: 7px !important;
+      .e-button-style();
+    }
+  }
+
+  .e-dropdown-panel {
+
+    .dropdown-content {
+      min-width: 110px;
+      left: -110px;
+      color: @theme-dark !important;
+      img, .e-text {
+        cursor: pointer !important;
+        font-size: 12px !important;
+        margin: 5px;
+      }
+
+      img {
+        float: left;
+        width: 30px;
+        height: auto;
+      }
+
+      .e-text {
+        clear: both;
+      }
+    }
+  }
+
+
+  .e-left {
+    float: left;
+  }
+
+  .e-right {
+    float: right;
+  }
+}
+
+
+// Toolbar button style
+.e-button-style() {
+  .radius();
+  background: @theme-primary-lighter !important;
+  color: @theme-white !important;
+  box-shadow: 3px 3px 3px @theme-light-gray !important;
+}

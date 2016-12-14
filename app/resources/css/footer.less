@@ -1,0 +1,38 @@
+@import "variables.less";
+@import "mixins";
+
+.e-footer {
+  ul {
+    .nospace();
+    list-style-type: none;
+    .space-out(0, 10);
+  }
+
+  .e-footer-container {
+    background-color: @theme-secondary;
+
+    .e-footer-list {
+      width: 100%;
+      text-align: center;
+      margin-top: 10px;
+      display: table;
+      min-height: 60px;
+      .e-footer-content {
+        display: table-cell;
+        vertical-align: middle;
+        color: @theme-light-gray;
+        font-size: 32px;
+      }
+    }
+    .e-footer-content {
+      // display: inline-block;
+
+    }
+
+    img {
+      max-width: 27px;
+      max-height: 27px;
+    }
+  }
+}
+

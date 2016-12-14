@@ -1,0 +1,110 @@
+@import "variables";
+.transition-all() {
+  .transition-variant(all 0.30s ease-in-out);
+}
+
+.transition-variant(@attr) {
+  -webkit-transition: @attr;
+  -moz-transition: @attr;
+  -ms-transition: @attr;
+  -o-transition: @attr;
+  transition: @attr;
+}
+
+.transform-variant(@attr) {
+  -webkit-transform: @attr;
+  -moz-transform: @attr;
+  -ms-transform: @attr;
+  -o-transform: @attr;
+  transform: @attr;
+}
+
+.box-sizing() {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.box-shadow(@attr) {
+  -moz-box-shadow: @attr;
+  -webkit-box-shadow: @attr;
+  box-shadow: @attr;
+}
+
+.button-variant(@color; @background; @border) {
+  color: @color;
+  background-color: @background;
+  border-color: @border;
+  .transition-all;
+
+  &:hover,
+  &:focus,
+  &.focus,
+  &:active,
+  &.active,
+  .open > .dropdown-toggle& {
+    color: @color;
+    background-color: darken(@background, 5%);
+    border-color: darken(@border, 7%);
+  }
+  &:active,
+  &.active,
+  .open > .dropdown-toggle& {
+    background-image: none;
+  }
+  &.disabled,
+  &[disabled],
+  fieldset[disabled] & {
+    &,
+    &:hover,
+    &:focus,
+    &.focus,
+    &:active,
+    &.active {
+      background-color: @background;
+      border-color: @border;
+    }
+  }
+
+  .badge {
+    color: @background;
+    background-color: @color;
+  }
+}
+
+.hover-effect(@normal; @hover; @hover-background; @active;) {
+  color: @normal;
+  .transition-all;
+
+  &:hover{
+    color: @hover;
+    background-color: @hover-background !important;
+  }
+  &:active {
+    color: @active;
+  }
+}
+
+.nospace() {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+// http://www.growingwiththeweb.com/2014/06/detecting-number-of-siblings-with-css.html
+.space-out(@min, @max) {
+  .space-out-loop(@i) when (@i > @min) {
+    .space-out-loop(@i - 1);
+    li:first-child:nth-last-child(@{i}),
+    li:first-child:nth-last-child(@{i}) ~ li {
+      width: 1 / @i * 100%;
+    }
+  }
+  .space-out-loop(@max);
+}
+
+.radius() {
+  border-radius: @size-border-radius;
+  padding: 5px 20px;
+}
+

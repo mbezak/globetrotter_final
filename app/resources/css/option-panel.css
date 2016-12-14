@@ -1,0 +1,19 @@
+.e-option-panel .dropdown,
+.e-dropdown-panel .dropdown {
+  position: relative;
+  display: inline-block;
+}
+.e-option-panel .dropdown-content,
+.e-dropdown-panel .dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  padding: 12px 16px;
+  z-index: 1;
+}
+.e-option-panel .dropdown:hover .dropdown-content,
+.e-dropdown-panel .dropdown:hover .dropdown-content {
+  display: block;
+}

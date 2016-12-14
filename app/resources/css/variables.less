@@ -1,0 +1,82 @@
+// Colors
+@theme-primary: #8ebf2c;
+@theme-primary-lighter: #b6d576;
+@theme-primary-pale: #f4f9ea;
+
+@theme-primary-text: #252123;
+@theme-disabled-text: #808080;
+
+@theme-secondary-lighter: hsl(201, 91, 54);
+@theme-secondary: #1389c8;
+@theme-secondary-darker: #145a7d;
+
+@theme-error: #de4928;
+@theme-error-gt: #d2232a;
+@theme-warn: #decc17;
+@theme-info: #1389c8;
+@theme-ok: @theme-primary;
+
+
+@theme-dark: #221e20;
+@theme-less-dark: #2e2e2e;
+
+@theme-white: #ffffff;
+@theme-light-gray: #f1f0f0;
+@theme-gray: #a19e9a;
+
+// Font
+@font-size: 20px;
+@font-header: Arial, Helvetica, sans-serif;
+@font-paragraph: Arial, Helvetica, sans-serif;
+
+// bye bye pretty fonts
+//@font-header: 'Open Sans', sans-serif;
+//@font-paragraph:  'Roboto', sans-serif;
+
+.heading-font() {
+  font-family: @font-header;
+  font-weight: 400;
+  font-size: 25px;
+}
+
+.heading2-font() {
+  font-family: @font-paragraph;
+  font-weight: 400;
+  text-transform: uppercase;
+  font-size: @font-size * 1.2;
+}
+
+.normal-font() {
+  font-family: @font-paragraph;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 14px;
+}
+
+.form-font() {
+  font-family: @font-paragraph;
+  font-weight: 400;
+  font-size: @font-size * 0.7;
+}
+
+.table-font() {
+  font-family: @font-paragraph;
+  font-style: normal;
+  font-weight: 500;
+  font-size: @font-size * 0.8;
+}
+
+
+// Size
+@size-max: 100%;
+@cols: 12;
+@size-toolbar: 58px;
+@size-tablet: 601px;
+@size-desktop: 993px;
+
+@size-tile: 160px;
+
+@size-header: 69px;
+@size-footer: 69px;
+
+@size-border-radius: 30px;

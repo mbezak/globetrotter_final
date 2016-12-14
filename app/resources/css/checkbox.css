@@ -1,0 +1,61 @@
+.e-checkbox {
+  height: 20px;
+  margin-left: 20px;
+}
+.control {
+  display: block;
+  position: relative;
+  padding-left: 30px;
+  margin-bottom: 15px;
+  cursor: pointer;
+  font-size: 18px;
+}
+.control input {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+.e-checkbox-indicator {
+  position: absolute;
+  top: 2px;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  background-color: #ffffff;
+}
+.control:hover input ~ .e-checkbox-indicator,
+.control input:focus ~ .e-checkbox-indicator {
+  background-color: #1389c8;
+}
+.control input:checked ~ .e-checkbox-indicator {
+  background: #1389c8;
+}
+.control:hover input:not([disabled]):checked ~ .e-checkbox-indicator,
+.control input:checked:focus ~ .e-checkbox-indicator {
+  background: #145a7d;
+}
+.control input:disabled ~ .e-checkbox-indicator {
+  background: #cccccc !important;
+  opacity: 0.6;
+  pointer-events: none;
+}
+.e-checkbox-indicator:after {
+  content: '';
+  position: absolute;
+  display: none;
+}
+.control input:checked ~ .e-checkbox-indicator:after {
+  display: block;
+}
+.e-checkbox .e-checkbox-indicator:after {
+  left: 8px;
+  top: 4px;
+  width: 3px;
+  height: 8px;
+  border: solid #ffffff;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+.e-checkbox input:disabled ~ .e-checkbox-indicator:after {
+  border-color: #221e20;
+}

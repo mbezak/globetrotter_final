@@ -1,0 +1,83 @@
+.e-upload {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  overflow-x: auto;
+  color: #8ebf2c;
+  background-color: #fdfdfd;
+  border-radius: 25px;
+  border: 3px dashed #8ebf2c;
+  margin: 15px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+.e-upload .e-empty-container {
+  text-align: center;
+  padding: 60px 40px;
+}
+.e-upload .e-empty-container i {
+  padding: 15px 0 10px 0;
+}
+.e-upload .e-empty-container .message {
+  padding: 5px 10px 40px;
+  font-size: 20px;
+  font-weight: 500;
+}
+.e-upload .e-empty-container .message:after {
+  content: '.';
+  visibility: hidden;
+}
+.e-upload .e-filled-container .e-ok {
+  color: #8ebf2c;
+}
+.e-upload .e-filled-container .e-cancel {
+  color: #de4928;
+}
+.e-upload .e-filled-container .e-filename {
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-transition: all 3s ease-in-out;
+  -moz-transition: all 3s ease-in-out;
+  -ms-transition: all 3s ease-in-out;
+  -o-transition: all 3s ease-in-out;
+  transition: all 3s ease-in-out;
+}
+.e-upload .e-progress {
+  background-color: #ffffff;
+  height: 5px;
+  width: 100%;
+  margin: 10px 0;
+}
+.e-upload .e-progress .e-progress-bar {
+  background-color: #8ebf2c;
+  height: 5px;
+  width: 0%;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+.e-upload-hover {
+  background-color: #f4f9ea;
+}
+.e-single-upload .e-inputfile {
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
+}
+.e-single-upload .e-inputfile + label {
+  cursor: pointer;
+  /* "hand" cursor */
+}

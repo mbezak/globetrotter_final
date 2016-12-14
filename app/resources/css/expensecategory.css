@@ -1,0 +1,26 @@
+.e-expense-category {
+  height: 90px;
+  width: 40px;
+  background-color: #145a7d;
+  text-align: center;
+  float: left;
+  display: inline-block;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.e-expense-category .fa-plane {
+  color: #ffffff;
+  margin-top: 30px;
+  font-size: 20px;
+}
+.e-expense-category .fa-cutlery {
+  color: #ffffff;
+  margin-top: 30px;
+  font-size: 20px;
+}
+.e-expense-category .fa-question {
+  color: #ffffff;
+  margin-top: 30px;
+  font-size: 20px;
+}

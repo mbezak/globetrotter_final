@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>GFE</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="app/resources/css/global.css" type="text/css" />
+    <link rel="stylesheet" href="node_modules/codemirror/lib/codemirror.css" type="text/css" />
+    <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css" type="text/css" />
+    <script src="app/resources/js/style-select.js"></script>
+
+    <!-- 1. Load libraries -->
+
+    <!-- Hammer JS Touch Emulator: Uncomment if for desktop -->
+    <script src="node_modules/hammer-touchemulator/touch-emulator.js"></script>
+    <script>
+        TouchEmulator();
+    </script>
+
+    <!-- Hammer JS -->
+    <script src="node_modules/hammerjs/hammer.js"></script>
+
+    <!-- Polyfill(s) for older browsers -->
+    <script src="node_modules/core-js/client/shim.min.js"></script>
+
+
+    <!-- Angular Dependecies -->
+    <script src="node_modules/zone.js/dist/zone.js"></script>
+    <script src="node_modules/reflect-metadata/Reflect.js"></script>
+    <script src="node_modules/systemjs/dist/system.src.js"></script>
+
+    <!-- 2. Configure SystemJS -->
+    <script src="systemjs.config.js"></script>
+    <script>
+        System.import('app').catch(function(err){ console.error(err); });
+    </script>
+</head>
+<!-- 3. Display the application -->
+<body>
+    <my-app>
+        <div class="loading">
+            <i class="fa fa-refresh fa-spin fa-5x fa-fw"></i>
+            <span class="sr-only">Loading...</span>
+        </div>
+    </my-app>
+</body>
+</html>

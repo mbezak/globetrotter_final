@@ -1,0 +1,25 @@
+.e-image-viewer .e-pagination {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  text-transform: uppercase;
+  font-size: 24px;
+  padding: 10px 0;
+}
+.e-image-viewer .e-page {
+  width: 100%;
+}
+.e-image-viewer i {
+  color: #2e2e2e;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+.e-image-viewer i:hover {
+  color: #8ebf2c;
+  background-color: transparent !important;
+}
+.e-image-viewer i:active {
+  color: #1389c8;
+}

@@ -1,0 +1,70 @@
+@import "variables";
+@import "mixins";
+
+.e-checkbox {
+  height: 20px;
+  margin-left: 20px;
+}
+
+.control {
+  display: block;
+  position: relative;
+  padding-left: 30px;
+  margin-bottom: 15px;
+  cursor: pointer;
+  font-size: 18px;
+  input {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+  }
+}
+
+// Custom control
+.e-checkbox-indicator {
+  position: absolute;
+  top: 2px;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  background-color: @theme-white;
+  // Hover and focus
+  .control:hover input ~ &,
+  .control input:focus ~ & {
+    background-color: @theme-secondary;
+  }
+}
+
+
+.control input:checked ~ .e-checkbox-indicator {
+  background: @theme-secondary;
+}
+.control:hover input:not([disabled]):checked ~ .e-checkbox-indicator,
+.control input:checked:focus ~ .e-checkbox-indicator {
+  background: @theme-secondary-darker;
+}
+.control input:disabled ~ .e-checkbox-indicator {
+  background: darken(@theme-white, 20%) !important;
+  opacity: 0.6;
+  pointer-events: none;
+}
+.e-checkbox-indicator:after {
+  content: '';
+  position: absolute;
+  display: none;
+}
+.control input:checked ~ .e-checkbox-indicator:after {
+  display: block;
+}
+.e-checkbox .e-checkbox-indicator:after {
+  left: 8px;
+  top: 4px;
+  width: 3px;
+  height: 8px;
+  border: solid @theme-white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+.e-checkbox input:disabled ~ .e-checkbox-indicator:after {
+  border-color: @theme-dark;
+}

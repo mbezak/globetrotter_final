@@ -1,0 +1,102 @@
+@import "mixins.less";
+@import "variables.less";
+@import "property-editor.less";
+@import "table.less";
+@import "layout.less";
+@import "label.less";
+@import "tabs.less";
+@import "image-viewer.less";
+@import "paginator.less";
+@import "toolbar.less";
+@import "tree.less";
+@import "option-panel.less";
+@import "tile.less";
+@import "footer.less";
+@import "expense-tile.less";
+@import "expense.less";
+@import "header.less";
+@import "expensestatus.less";
+@import "expensecategory.less";
+@import "button";
+@import "upload";
+@import "total.less";
+@import "checkbox";
+@import "overview-expense.less";
+@import "grid";
+@import "marketing-tile";
+@import "swiper";
+
+body {
+  .normal-font();
+  color: @theme-primary-text;
+  background-color: @theme-white;
+  margin: 0;
+  padding: 0;
+}
+
+@media (max-width: @size-desktop) {
+  body {
+    background-color: @theme-white;
+  }
+}
+
+body .e-expense-tile {
+  .normal-font();
+  color: @theme-secondary;
+  background-color: @theme-light-gray;
+
+}
+
+
+.loading {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  top:0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  margin: auto;
+}
+
+.e-theme-primary {
+  color: @theme-primary;
+}
+
+
+.e-text-center {
+  text-align: center;
+}
+
+.e-text-left {
+  text-align: left;
+}
+
+.e-text-right {
+  text-align: right;
+}
+
+.e-bg-error {
+  background-color: @theme-error;
+}
+
+.e-bg-error-gt {
+  background-color: @theme-error-gt;
+}
+
+.e-bg-warn {
+  background-color: @theme-warn;
+}
+
+.e-bg-ok {
+  background-color: @theme-primary;
+}
+
+.e-bg-info {
+  background-color: @theme-secondary;
+}
+
+.e-bg-swipe-options {
+  background-color: @theme-secondary-darker;
+}

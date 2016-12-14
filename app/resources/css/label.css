@@ -1,0 +1,27 @@
+.e-label-error,
+.e-label-warn,
+.e-label-info {
+  font-size: 14px;
+  color: #ffffff;
+  border-radius: 30px;
+  padding: 5px 20px;
+}
+.e-label-error a,
+.e-label-warn a,
+.e-label-info a {
+  color: #ffffff !important;
+}
+.e-label-error a:hover,
+.e-label-warn a:hover,
+.e-label-info a:hover {
+  color: #cccccc !important;
+}
+.e-label-error {
+  background-color: #de4928;
+}
+.e-label-warn {
+  background-color: #decc17;
+}
+.e-label-info {
+  background-color: #1389c8;
+}

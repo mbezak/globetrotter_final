@@ -1,0 +1,27 @@
+@import "variables";
+@import "mixins";
+
+.e-expense-status {
+
+  .e-icon-box(@theme-white; @theme-info);
+  &.alert { background-color: @theme-error-gt; }
+  &.warning { background-color: @theme-warn; }
+  &.ok { background-color: @theme-ok; }
+
+  width: 60px;
+  height: 90px;
+  float: right;
+  .box-sizing();
+
+
+  .e-icon-box(@color; @background) {
+    .box-sizing();
+    padding-bottom: 20px;
+    padding-top: 25px;
+    text-align: center;
+    font-size: 200%;
+    color: @color;
+    background-color: @background;
+
+  }
+}

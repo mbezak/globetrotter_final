@@ -1,0 +1,40 @@
+@import "variables.less";
+@import "mixins.less";
+
+.e-tile {
+
+
+  color: @theme-primary;
+  width: 200px;
+  height: 200px;
+  text-align: center;
+  padding-top: 20px;
+  .box-sizing();
+  border-radius: 25px;
+  border: 3px solid @theme-primary;
+
+
+  .header {
+    padding: 5px;
+    font-size: 18px;
+    font-weight: bold;
+  }
+
+  i, img {
+    font-size: 70px;
+    padding: 15px 0 10px 0;
+  }
+  .message {
+    font-size: 12px;
+    font-weight: bold;
+    padding: 5px;
+    &:after {
+      content: '.';
+      visibility: hidden;
+    }
+  }
+
+  &:hover {
+    background-color: @theme-primary-pale;
+  }
+}

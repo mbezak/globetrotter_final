@@ -1,0 +1,36 @@
+@import "variables.less";
+@import "mixins.less";
+
+.e-expense-tile {
+  color: @theme-secondary;
+  width: @size-tile * 0.9;
+  height: @size-tile * 0.9;
+  .box-sizing();
+  .radius();
+  text-align: center;
+
+  i {
+    font-size: 30px;
+    float: right;
+    display: block;
+    padding: 5px;
+
+  }
+
+  .receipticon {
+    height: 50px;
+    width: auto;
+    padding: 40px 0 5px 30px;
+    display: block;
+  }
+
+  .header {
+    text-align: center;
+    font-size: 120%;
+    font-weight: 500;
+  }
+}
+
+
+
+

@@ -1,0 +1,37 @@
+@import "variables";
+@import "mixins";
+
+.e-button {
+  .nospace();
+}
+
+//Button styles
+.btn-default {
+  .button-variant(@theme-dark; @theme-white; @theme-white);
+}
+
+.btn-primary {
+  .button-variant(@theme-white;@theme-primary;@theme-primary);
+}
+
+.btn-secondary {
+  .button-variant(@theme-white, @theme-less-dark, @theme-less-dark);
+}
+
+.btn {
+  .radius();
+  box-shadow: 3px 3px 3px #dddddd;
+  border: 0 !important;
+  //padding: 10px 20px;
+  text-transform: uppercase;
+  .normal-font();
+  text-align: center;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.btn-form {
+  display: inline;
+  margin-right: 10px;
+
+}
