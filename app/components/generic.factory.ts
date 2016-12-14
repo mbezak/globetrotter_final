@@ -1,10 +1,9 @@
-///<reference path="grid/e-grid.data.ts"/>
+/**
+ * @author Fmu
+ */
 import {Injectable, ComponentFactoryResolver, ComponentFactory, Compiler} from "@angular/core";
 
 import {EComponent} from "./e.component";
-import {ETableComponent} from "./table/e-table.component";
-import {ETableView} from "./table/e-table.view";
-import {ETableData} from "./table/e-table.data";
 import {ETestComponent} from "./test/e-test.component";
 import {ETestView} from "./test/e-test.view";
 import {ETestData} from "./test/e-test.data";
@@ -18,39 +17,15 @@ import {GenericService} from "./generic.service";
 import {ETabsData} from "./tabs/e-tabs.data";
 import {ETabsView} from "./tabs/e-tabs.view";
 import {ETabsComponent} from "./tabs/e-tabs.component";
-import {EImageViewerData} from "./image-viewer/e-image-viewer.data";
-import {EImageViewerView} from "./image-viewer/e-image-viewer.view";
-import {EImageViewerComponent} from "./image-viewer/e-image-viewer.component";
-import {EPaginatorComponent} from "./paginator/e-paginator.component";
-import {EPaginatorData} from "./paginator/e-paginator.data";
-import {EPaginatorView} from "./paginator/e-paginator.view";
 import {ELabelComponent} from "./label/e-label.component";
 import {ELabelData} from "./label/e-label.data";
 import {ELabelView} from "./label/e-label.view";
 import {EIconData} from "./icon/e-icon.data";
 import {EIconView} from "./icon/e-icon.view";
 import {EIconComponent} from "./icon/e-icon.component";
-import {EToolbarComponent} from "./toolbar/e-toolbar.component";
-import {EToolbarData} from "./toolbar/e-toolbar.data";
-import {EToolbarView} from "./toolbar/e-toolbar.view";
 import {EImageComponent} from "./image/e-image.component";
 import {EImageData} from "./image/e-image.data";
 import {EImageView} from "./image/e-image.view";
-import {ETreeComponent} from "./tree/e-tree.component";
-import {ETreeData} from "./tree/e-tree.data";
-import {ETreeView} from "./tree/e-tree.view";
-import {ECodeMirrorComponent} from "./code-mirror/e-code-mirror.component";
-import {ECodeMirrorData} from "./code-mirror/e-code-mirror.data";
-import {ECodeMirrorView} from "./code-mirror/e-code-mirror.view";
-import {EOptionPanelComponent} from "./option-panel/e-option-panel.component";
-import {EOptionPanelData} from "./option-panel/e-option-panel.data";
-import {EOptionPanelView} from "./option-panel/e-option-panel.view";
-import {ETileComponent} from "./tile/e-tile.component";
-import {ETileData} from "./tile/e-tile.data";
-import {ETileView} from "./tile/e-tile.view";
-import {ELayoutDemoComponent} from "./layout-demo/e-layout-demo.component";
-import {ELayoutDemoData} from "./layout-demo/e-layout-demo.data";
-import {ELayoutDemoView} from "./layout-demo/e-layout-demo.view";
 import {ELayoutGridView} from "./layout-grid/e-layout-grid.view";
 import {ELayoutGridComponent} from "./layout-grid/e-layout-grid.component";
 import {ELayoutGridData} from "./layout-grid/e-layout-grid.data";
@@ -66,9 +41,6 @@ import {EFooterView} from "./footer/e-footer.view";
 import {EHeaderComponent} from "./header/e-header.component";
 import {EHeaderData} from "./header/e-header.data";
 import {EHeaderView} from "./header/e-header.view";
-import {ELayoutExpenseGroupsComponent} from "./layout-expense-groups/e-layout-expense-groups.component";
-import {ELayoutExpenseGroupsData} from "./layout-expense-groups/e-layout-expense-groups.data";
-import {ELayoutExpenseGroupsView} from "./layout-expense-groups/e-layout-expense-groups.view";
 import {ELayoutVerticalComponent} from "./layout-vertical/e-layout-vertical.component";
 import {ELayoutVerticalData} from "./layout-vertical/e-layout-vertical.data";
 import {ELayoutVerticalView} from "./layout-vertical/e-layout-vertical.view";
@@ -84,18 +56,9 @@ import {EUploadComponent} from "./upload/e-upload.component";
 import {ETotalComponent} from "./total/e-total.component";
 import {ETotalData} from "./total/e-total.data";
 import {ETotalView} from "./total/e-total.view";
-import {EDropdownPanelComponent} from "./dropdown-panel/e-dropdown-panel.component";
-import {EDropdownPanelData} from "./dropdown-panel/e-dropdown-panel.data";
-import {EDropdownPanelView} from "./dropdown-panel/e-dropdown-panel.view";
-import {EToolbarFilterComponent} from "./toolbar-filter/e-toolbar-filter.component";
-import {EToolbarFilterData} from "./toolbar-filter/e-toolbar-filter.data";
-import {EToolbarFilterView} from "./toolbar-filter/e-toolbar-filter.view";
 import {EGridData} from "./grid/e-grid.data";
 import {EGridView} from "./grid/e-grid.view";
 import {EGridComponent} from "./grid/e-grid.component";
-import {EMarketingTileComponent} from "./marketing-tile/e-marketing-tile.component";
-import {EMarketingTileData} from "./marketing-tile/e-marketing-tile.data";
-import {EMarketingTileView} from "./marketing-tile/e-marketing-tile.view";
 import {ESwiperComponent} from "./swiper/e-swiper.component";
 import {ESwiperData} from "./swiper/e-swiper.data";
 import {ESwiperView} from "./swiper/e-swiper.view";
@@ -111,6 +74,11 @@ export class GenericFactory {
         this.controller = controller;
     }
 
+    /**
+     * Creates a component of the type given as a parameter
+     * @param type recognized value from the generic frontend framework
+     * @returns {any} a component
+     */
     createInstance(type: string): EComponent {
         switch (type) {
 
@@ -119,18 +87,6 @@ export class GenericFactory {
                     controller: this.controller,
                     data: new EButtonData(),
                     factory: this.createButtonFactory()
-                });
-            case "code-mirror"           :
-                return new ECodeMirrorComponent({
-                    controller: this.controller,
-                    data: new ECodeMirrorData(),
-                    factory: this.createCodeMirrorFactory()
-                });
-            case "dropdown-panel"        :
-                return new EDropdownPanelComponent({
-                    controller: this.controller,
-                    data: new EDropdownPanelData(),
-                    factory: this.createDropdownPanelFactory()
                 });
             case "grid"        :
                 return new EGridComponent({
@@ -151,12 +107,6 @@ export class GenericFactory {
                     data: new EImageData(),
                     factory: this.createImageFactory()
                 });
-            case "image-viewer"          :
-                return new EImageViewerComponent({
-                    controller: this.controller,
-                    data: new EImageViewerData(),
-                    factory: this.createImageViewerFactory()
-                });
             case "label"                 :
                 return new ELabelComponent({
                     controller: this.controller,
@@ -169,49 +119,20 @@ export class GenericFactory {
                     data: new ELayoutData(),
                     factory: this.createLayoutFactory()
                 });
-            case "layout-demo"           :
-                return new ELayoutDemoComponent({
-                    controller: this.controller,
-                    data: new ELayoutDemoData(),
-                    factory: this.createLayoutDemoFactory()
-                });
+
             case "layout-grid"           :
                 return new ELayoutGridComponent({
                     controller: this.controller,
                     data: new ELayoutGridData(),
                     factory: this.createLayoutGridFactory()
                 });
-            case "layout-expense-groups" :
-                return new ELayoutExpenseGroupsComponent({
-                    controller: this.controller,
-                    data: new ELayoutExpenseGroupsData(),
-                    factory: this.createLayoutExpenseGroupsFactory()
-                });
+
             case "layout-vertical"       :
                 return new ELayoutVerticalComponent({
                     controller: this.controller,
                     data: new ELayoutVerticalData(),
                     factory: this.createLayoutVerticalFactory()
                 });
-            case "marketing-tile"       :
-                return new EMarketingTileComponent({
-                    controller: this.controller,
-                    data: new EMarketingTileData(),
-                    factory: this.createMarketingTileFactory()
-                });
-            case "option-panel"          :
-                return new EOptionPanelComponent({
-                    controller: this.controller,
-                    data: new EOptionPanelData(),
-                    factory: this.createOptionPanelFactory()
-                });
-            case "paginator"             :
-                return new EPaginatorComponent({
-                    controller: this.controller,
-                    data: new EPaginatorData(),
-                    factory: this.createPaginatorFactory()
-                });
-
             case "property-editor"       :
                 return new EPropertyEditorComponent({
                     controller: this.controller,
@@ -224,24 +145,14 @@ export class GenericFactory {
                     data: new ESwiperData(),
                     factory: this.createSwiperFactory()
                 });
-            case "table"                 :
-                return new ETableComponent({
-                    controller: this.controller,
-                    data: new ETableData(),
-                    factory: this.createTableFactory()
-                });
+
             case "total"                 :
                 return new ETotalComponent({
                     controller: this.controller,
                     data: new ETotalData(),
                     factory: this.createTotalFactory()
                 });
-            case "tile"                  :
-                return new ETileComponent({
-                    controller: this.controller,
-                    data: new ETileData(),
-                    factory: this.createTileFactory()
-                });
+
             case "tabs"                  :
                 return new ETabsComponent({
                     controller: this.controller,
@@ -254,25 +165,7 @@ export class GenericFactory {
                     data: new ETestData(),
                     factory: this.createTestFactory()
                 });
-            case "toolbar"               :
-                return new EToolbarComponent({
-                    controller: this.controller,
-                    data: new EToolbarData(),
-                    factory: this.createToolbarFactory()
-                });
-            case "toolbar-filter"   :
-                return new EToolbarFilterComponent({
-                    controller: this.controller,
-                    data: new EToolbarFilterData(),
-                    factory: this.createToolbarFilterFactory()
-                });
 
-            case "tree"                  :
-                return new ETreeComponent({
-                    controller: this.controller,
-                    data: new ETreeData(),
-                    factory: this.createTreeFactory()
-                });
             case "expense-tile"          :
                 return new EExpenseTileComponent({
                     controller: this.controller,
@@ -317,14 +210,6 @@ export class GenericFactory {
         }
     }
 
-    private createMarketingTileFactory() : Promise<ComponentFactory<EMarketingTileView>> {
-        return this.componentResolver
-            .compileComponentAsync(EMarketingTileView)
-            .then((factory: ComponentFactory<EMarketingTileView>) => {
-                return factory;
-            });
-    }
-
     private createButtonFactory(): Promise<ComponentFactory<EButtonView>> {
         return this.componentResolver
             .compileComponentAsync(EButtonView)
@@ -349,14 +234,6 @@ export class GenericFactory {
             });
     }
 
-    private createCodeMirrorFactory(): Promise<ComponentFactory<ECodeMirrorView>> {
-        return this.componentResolver
-            .compileComponentAsync(ECodeMirrorView)
-            .then((factory: ComponentFactory<ECodeMirrorView>) => {
-                return factory;
-            });
-    }
-
     private createImageFactory(): Promise <ComponentFactory <EImageView>> {
         return this.componentResolver
             .compileComponentAsync(EImageView)
@@ -364,15 +241,6 @@ export class GenericFactory {
                 return factory;
             });
     }
-
-    private createDropdownPanelFactory(): Promise <ComponentFactory <EDropdownPanelView>> {
-        return this.componentResolver
-            .compileComponentAsync(EDropdownPanelView)
-            .then((factory: ComponentFactory<EDropdownPanelView>) => {
-                return factory;
-            });
-    }
-
 
     private createGridFactory(): Promise <ComponentFactory <EGridView>> {
         return this.componentResolver
@@ -390,42 +258,10 @@ export class GenericFactory {
             });
     }
 
-    private createImageViewerFactory(): Promise <ComponentFactory <EImageViewerView>> {
-        return this.componentResolver
-            .compileComponentAsync(EImageViewerView)
-            .then((factory: ComponentFactory<EImageViewerView>) => {
-                return factory;
-            });
-    }
-
-    private createOptionPanelFactory(): Promise <ComponentFactory <EOptionPanelView>> {
-        return this.componentResolver
-            .compileComponentAsync(EOptionPanelView)
-            .then((factory: ComponentFactory<EOptionPanelView>) => {
-                return factory;
-            });
-    }
-
     private createSwiperFactory(): Promise <ComponentFactory <ESwiperView>> {
         return this.componentResolver
             .compileComponentAsync(ESwiperView)
             .then((factory: ComponentFactory<ESwiperView>) => {
-                return factory;
-            });
-    }
-
-    private createTableFactory(): Promise <ComponentFactory <ETableView>> {
-        return this.componentResolver
-            .compileComponentAsync(ETableView)
-            .then((factory: ComponentFactory<ETableView>) => {
-                return factory;
-            });
-    }
-
-    private createTileFactory(): Promise <ComponentFactory <ETileView>> {
-        return this.componentResolver
-            .compileComponentAsync(ETileView)
-            .then((factory: ComponentFactory<ETileView>) => {
                 return factory;
             });
     }
@@ -446,34 +282,10 @@ export class GenericFactory {
             });
     }
 
-    private createToolbarFactory(): Promise <ComponentFactory <EToolbarView>> {
-        return this.componentResolver
-            .compileComponentAsync(EToolbarView)
-            .then((factory: ComponentFactory<EToolbarView>) => {
-                return factory;
-            });
-    }
-
-    private createTreeFactory(): Promise <ComponentFactory <ETreeView>> {
-        return this.componentResolver
-            .compileComponentAsync(ETreeView)
-            .then((factory: ComponentFactory<ETreeView>) => {
-                return factory;
-            });
-    }
-
     private createLabelFactory(): Promise <ComponentFactory <ELabelView>> {
         return this.componentResolver
             .compileComponentAsync(ELabelView)
             .then((factory: ComponentFactory<ELabelView>) => {
-                return factory;
-            });
-    }
-
-    private createToolbarFilterFactory(): Promise <ComponentFactory <EToolbarFilterView>> {
-        return this.componentResolver
-            .compileComponentAsync(EToolbarFilterView)
-            .then((factory: ComponentFactory<EToolbarFilterView>) => {
                 return factory;
             });
     }
@@ -486,14 +298,6 @@ export class GenericFactory {
             });
     }
 
-    private createLayoutDemoFactory(): Promise <ComponentFactory <ELayoutDemoView>> {
-        return this.componentResolver
-            .compileComponentAsync(ELayoutDemoView)
-            .then((factory: ComponentFactory<ELayoutDemoView>) => {
-                return factory;
-            });
-    }
-
     private createLayoutGridFactory(): Promise <ComponentFactory <ELayoutGridView>> {
         return this.componentResolver
             .compileComponentAsync(ELayoutGridView)
@@ -502,26 +306,10 @@ export class GenericFactory {
             });
     }
 
-    private createLayoutExpenseGroupsFactory(): Promise <ComponentFactory <ELayoutExpenseGroupsView>> {
-        return this.componentResolver
-            .compileComponentAsync(ELayoutExpenseGroupsView)
-            .then((factory: ComponentFactory<ELayoutExpenseGroupsView>) => {
-                return factory;
-            });
-    }
-
     private createPropertyEditorFactory(): Promise <ComponentFactory <EPropertyEditorView>> {
         return this.componentResolver
             .compileComponentAsync(EPropertyEditorView)
             .then((factory: ComponentFactory<EPropertyEditorView>) => {
-                return factory;
-            });
-    }
-
-    private createPaginatorFactory(): Promise <ComponentFactory <EPaginatorView>> {
-        return this.componentResolver
-            .compileComponentAsync(EPaginatorView)
-            .then((factory: ComponentFactory<EPaginatorView>) => {
                 return factory;
             });
     }

@@ -1,3 +1,6 @@
+/**
+ * @author Cristiana Man, Edilion devs
+ */
 import {Injectable} from '@angular/core';
 import {RequestMethod} from "@angular/http";
 
@@ -27,10 +30,20 @@ export class GenericService {
         factory.setController(this);
     }
 
+    /**
+     * @author Edilion devs
+     * @param app
+     */
     setApp(app: AppComponent) {
         this.app = app;
     }
 
+    /**
+     * @author Cristiana Man
+     * This method sets the application in the generic service
+     * and uses the config.json file to set the initialEndpoint and path to the API
+     * @param app
+     */
     configAndStart(app: AppComponent) {
         this.setApp(app);
         this.requester.configLoader()
@@ -44,6 +57,7 @@ export class GenericService {
     }
 
     /**
+     * @author Cristiana Man
      * This method is called during the execution of a component's onNgInit method and it uses Requester for retrieving data and then runs the json processor
      * @param callback string in the following format "<GET | PUT | POST | DELETE> <API_REQUEST_URL>"
      * @param data optional json object required for PUT, POST, possibly DELETE
@@ -53,6 +67,10 @@ export class GenericService {
             .then(response => this.processResponse(response));
     }
 
+    /**
+     * @author Edilion devs
+     * @param response
+     */
     processResponse(response) {
         if (response.startsWith("redirect")) {
             window.location = response.split("::")[1];
@@ -63,6 +81,7 @@ export class GenericService {
     }
 
     /**
+     * @author Cristiana Man
      * This method configures a map with the components described in jsonData
      * @param jsonData json object containing an array of components
      */
@@ -100,6 +119,7 @@ export class GenericService {
     }
 
     /**
+     * @author Cristiana Man
      * This method looks into the local map (cache) for the component with specified id.
      * @param id component id
      * @return GenericData representing the component's data structure
@@ -109,16 +129,18 @@ export class GenericService {
     }
 
     /**
-     *
-     * @param type
-     * @returns instance of GenericData
+     * @author Cristiana Man
+     * This method uses the GenericFactory to create an instance of a component with a certain type
+     * @param type string which the GenericFactory knows how to interpret representing a kind of component
+     * @returns instance of GenericComponent
      */
     create(type: string): EComponent {
         return this.factory.createInstance(type);
     }
 
     /**
-     *
+     * @author Cristiana Man
+     * This method configures a component with its corresponding data
      * @param component
      * @param data
      */
@@ -127,14 +149,7 @@ export class GenericService {
     }
 
     /**
-     * This method is used only for test and it is not necessary, so it can be deleted
-     * @param data
-     */
-    display(data: any) {
-        console.log(JSON.stringify(data));
-    }
-
-    /**
+     * @author Edilion devs
      * When a User interacts with the app, a component may trigger a number of actions.
      * This method determines whether a component defines actions then runs all existing actions.
      * @param json object representation of the json passed for configuring the component triggered.
@@ -154,6 +169,7 @@ export class GenericService {
     }
 
     /**
+     * @author Edilion devs
      * Identifies and runs the action defined by cmp
      * @param cmp an object defining one of externalAction, clientAction, serverAction
      */
@@ -171,9 +187,8 @@ export class GenericService {
         }
     }
 
-
     /**
-     *
+     * @author Edilion devs
      * @param action
      */
     runServerAction(action : any) {
@@ -186,7 +201,12 @@ export class GenericService {
         }
         this.run(method, endpoint, data);
     }
-    
+
+    /**
+     * @author Edilion devs
+     * @param method
+     * @returns {RequestMethod}
+     */
     getRequestMethod(method) {
         switch (method) {
             case "GET": return RequestMethod.Get;
@@ -194,7 +214,12 @@ export class GenericService {
             default: return RequestMethod.Get;
         }
     }
-    
+
+    /**
+     * @author Edilion devs
+     * @param action
+     * @returns {any}
+     */
     processActionOutput(action) {
         if (action.output) {
             var outputTmpl = action.output;

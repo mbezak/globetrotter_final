@@ -1,3 +1,6 @@
+/**
+ * @author Cristiana Man
+ */
 import {GenericData} from "./generic.data";
 import {GenericService} from "./generic.service";
 

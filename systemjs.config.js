@@ -9,8 +9,6 @@
         '@angular':                   'node_modules/@angular',
         'angular2-in-memory-web-api': 'node_modules/angular2-in-memory-web-api',
         'rxjs':                       'node_modules/rxjs',
-        'codemirror' :                'node_modules/codemirror',
-        'ng2-codemirror' :            'node_modules/ng2-codemirror',
         'ng2-file-upload' :           'node_modules/ng2-file-upload',
         'jsonpath' :                  'node_modules/jsonpath'
     };
@@ -19,8 +17,6 @@
         'app':                        { main: 'main.js',  defaultExtension: 'js' },
         'angular2-in-memory-web-api': { main: 'index.js', defaultExtension: 'js' },
         'rxjs':                       { defaultExtension: 'js' },
-        'codemirror' :                { main: 'lib/codemirror.js', defaultExtension: 'js' },
-        'ng2-codemirror':             { main: 'lib/Codemirror.js', defaultExtension: 'js' },
         'ng2-file-upload':            { main: 'ng2-file-upload.js', defaultExtension: 'js' },
         'jsonpath':                   { main: 'jsonpath.js', defaultExtension: 'js' }
     };

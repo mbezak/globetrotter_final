@@ -1,3 +1,6 @@
+/**
+ * @author fmu
+ */
 import {ComponentFactory, ViewContainerRef} from "@angular/core";
 import {GenericData} from "./generic.data";
 import {GenericView} from "./generic.view";
