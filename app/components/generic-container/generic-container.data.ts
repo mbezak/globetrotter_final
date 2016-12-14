@@ -1,5 +1,5 @@
-import {GenericData} from "../generic.data";
-import {EComponent} from "../e.component";
+import {GenericData} from "../../genericframework/generic.data";
+import {EComponent} from "../../genericframework/e.component";
 /**
  * GenericContainerData must be extended by Data classes of Components such as Layout or Tabs that have the purpose of displaying other Components
  */

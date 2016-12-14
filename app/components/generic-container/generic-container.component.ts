@@ -1,6 +1,6 @@
-import {EComponent} from "../e.component";
-import {GenericComponent} from "../generic.component";
-import {GenericView} from "../generic.view";
+import {EComponent} from "../../genericframework/e.component";
+import {GenericComponent} from "../../genericframework/generic.component";
+import {GenericView} from "../../genericframework/generic.view";
 import {GenericContainerData} from "./generic-container.data";
 
 /**

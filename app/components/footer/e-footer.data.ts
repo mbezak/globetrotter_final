@@ -1,4 +1,4 @@
-import {EComponent} from "../e.component";
+import {EComponent} from "../../genericframework/e.component";
 import {GenericContainerData} from "../generic-container/generic-container.data";
 
 export class EFooterData extends GenericContainerData {

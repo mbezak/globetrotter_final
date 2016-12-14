@@ -1,6 +1,6 @@
 import {Component} from "@angular/core";
 import {EGridData} from "./e-grid.data";
-import {GenericView} from "../generic.view";
+import {GenericView} from "../../genericframework/generic.view";
 import {EContainerView} from "../generic-container/e-container.view";
 
 @Component({

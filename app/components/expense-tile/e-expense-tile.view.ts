@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 import { EExpenseTileData } from "./e-expense-tile.data";
-import { GenericView } from "../generic.view";
+import { GenericView } from "../../genericframework/generic.view";
 
 @Component({
     template: `

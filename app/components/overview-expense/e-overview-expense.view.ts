@@ -2,7 +2,7 @@
 import { Component } from '@angular/core';
 
 import { EOverviewExpenseData } from "./e-overview-expense.data";
-import { GenericView } from "../generic.view";
+import { GenericView } from "../../genericframework/generic.view";
 import {EExpenseCategoryView} from "./../../shared/e-expense-category.view";
 
 @Component({

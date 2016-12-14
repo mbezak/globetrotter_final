@@ -1,4 +1,4 @@
-import {GenericData} from "../generic.data";
+import {GenericData} from "../../genericframework/generic.data";
 
 export class EButtonData extends GenericData {
     text : string;

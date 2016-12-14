@@ -1,3 +1,6 @@
+/**
+ * @author Cristiana Man
+ */
 import {GenericComponent} from "./generic.component";
 import {GenericData} from "./generic.data";
 import {GenericView} from "./generic.view";

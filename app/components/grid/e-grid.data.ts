@@ -1,5 +1,5 @@
 import {GenericContainerData} from "../generic-container/generic-container.data";
-import {EComponent} from "../e.component";
+import {EComponent} from "../../genericframework/e.component";
 
 export class EGridData extends GenericContainerData {
     containers: any[];

@@ -2,7 +2,7 @@
  * @author Cristiana Man
  */
 import {Component} from "@angular/core";
-import {GenericView} from "../generic.view";
+import {GenericView} from "../../genericframework/generic.view";
 import {ELayoutVerticalData} from "./e-layout-vertical.data";
 import {EContainerView} from "../generic-container/e-container.view";
 

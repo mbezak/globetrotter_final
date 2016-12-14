@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { ETimelineExpenseData } from "./e-timeline-expense.data";
-import { GenericView } from "../generic.view";
+import { GenericView } from "../../genericframework/generic.view";
 import {EExpenseCategoryView} from "./../../shared/e-expense-category.view";
 import {EExpenseStatusView} from "./../../shared/e-expense-status.view";
 

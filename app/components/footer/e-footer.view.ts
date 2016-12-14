@@ -2,7 +2,7 @@ import {Component} from "@angular/core";
 
 import {EFooterData} from "./e-footer.data";
 import {EContainerView} from "../generic-container/e-container.view";
-import {GenericView} from "../generic.view";
+import {GenericView} from "../../genericframework/generic.view";
 
 @Component({
     selector: 'e-footer',

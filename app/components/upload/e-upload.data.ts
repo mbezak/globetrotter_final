@@ -1,12 +1,11 @@
-import {GenericData} from "../generic.data";
+/**
+ * @autor Cristiana Man
+ */
+import {GenericData} from "../../genericframework/generic.data";
 
 export class EUploadData extends GenericData {
-    message: string;
     document: File;
 
-    configure(data: {
-        message: string
-    }):void {
-        this.message = data.message;
+    configure(data: any):void {
     }
 }

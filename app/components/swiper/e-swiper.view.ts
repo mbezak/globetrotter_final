@@ -1,6 +1,6 @@
 /** @author Cristiana Man */
 import {Component} from "@angular/core";
-import {GenericView} from "../generic.view";
+import {GenericView} from "../../genericframework/generic.view";
 import {ESwiperData} from "./e-swiper.data";
 import {EContainerView} from "../generic-container/e-container.view";
 

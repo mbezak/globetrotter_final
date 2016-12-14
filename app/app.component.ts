@@ -1,8 +1,8 @@
 import {Component, OnInit, ViewChild, ViewContainerRef} from '@angular/core';
 import {RequestMethod} from "@angular/http";
 import {ELayoutView} from "./components/layout/e-layout.view";
-import {EComponent} from "./components/e.component";
-import {GenericService} from "./components/generic.service";
+import {EComponent} from "./genericframework/e.component";
+import {GenericService} from "./genericframework/generic.service";
 
 @Component({
     selector: 'my-app',

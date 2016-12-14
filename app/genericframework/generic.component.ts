@@ -1,5 +1,5 @@
 /**
- * @author fmu
+ * @author Edilion devs
  */
 import {ComponentFactory, ViewContainerRef} from "@angular/core";
 import {GenericData} from "./generic.data";

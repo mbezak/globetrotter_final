@@ -1,6 +1,6 @@
 import {Component} from "@angular/core";
 import {ETestData} from "./e-test.data";
-import {GenericView} from "../generic.view";
+import {GenericView} from "../../genericframework/generic.view";
 
 @Component({
     selector: 'e-test',

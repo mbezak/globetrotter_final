@@ -1,5 +1,5 @@
 import {Component} from "@angular/core";
-import {GenericView} from "../generic.view";
+import {GenericView} from "../../genericframework/generic.view";
 import {EButtonData} from "./e-button.data";
 
 @Component({

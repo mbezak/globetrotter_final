@@ -1,4 +1,4 @@
-import {GenericComponent} from "../generic.component";
+import {GenericComponent} from "../../genericframework/generic.component";
 import {EButtonData} from "./e-button.data";
 import {EButtonView} from "./e-button.view";
 
