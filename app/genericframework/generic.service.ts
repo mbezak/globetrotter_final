@@ -9,7 +9,7 @@ import {GenericFactory} from "./generic.factory";
 import {GenericData} from "./generic.data";
 
 import {EComponent} from "./e.component";
-import {EContainerComponent} from "../components/generic-container/e-container.component";
+import {EContainerComponent} from "./generic-container/e-container.component";
 
 import {RequesterService} from "../requester.service";
 import {ConfigService} from "../config.service";

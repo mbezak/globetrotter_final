@@ -2,7 +2,7 @@
  * @author Cristiana Man
  */
 import {EComponent} from "../../genericframework/e.component";
-import {GenericContainerData} from "../generic-container/generic-container.data";
+import {GenericContainerData} from "../../genericframework/generic-container/generic-container.data";
 
 export class ESwiperData extends GenericContainerData {
     containers: any[];

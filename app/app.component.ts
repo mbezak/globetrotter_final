@@ -1,5 +1,4 @@
 import {Component, OnInit, ViewChild, ViewContainerRef} from '@angular/core';
-import {RequestMethod} from "@angular/http";
 import {ELayoutView} from "./components/layout/e-layout.view";
 import {EComponent} from "./genericframework/e.component";
 import {GenericService} from "./genericframework/generic.service";

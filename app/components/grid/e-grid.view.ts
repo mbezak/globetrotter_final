@@ -1,7 +1,7 @@
 import {Component} from "@angular/core";
 import {EGridData} from "./e-grid.data";
 import {GenericView} from "../../genericframework/generic.view";
-import {EContainerView} from "../generic-container/e-container.view";
+import {EContainerView} from "../../genericframework/generic-container/e-container.view";
 
 @Component({
     selector: 'e-grid',

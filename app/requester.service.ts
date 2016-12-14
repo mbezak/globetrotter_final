@@ -1,3 +1,6 @@
+/**
+ * @author Cristiana Man, Edilion devs (headers)
+ */
 import {Injectable} from "@angular/core";
 import {Http, Headers, RequestOptions, RequestMethod} from "@angular/http";
 

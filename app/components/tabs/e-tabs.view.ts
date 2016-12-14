@@ -2,7 +2,7 @@ import {Component} from "@angular/core";
 
 import {GenericView} from "../../genericframework/generic.view";
 import {ETabsData} from "./e-tabs.data";
-import {EContainerView} from "../generic-container/e-container.view";
+import {EContainerView} from "../../genericframework/generic-container/e-container.view";
 
 @Component({
     selector: 'e-tabs',

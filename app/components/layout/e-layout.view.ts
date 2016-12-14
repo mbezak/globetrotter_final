@@ -1,7 +1,7 @@
 import {Component, ViewChild, ViewContainerRef, OnInit} from "@angular/core";
 import {ELayoutData} from "./e-layout.data";
 import {GenericView} from "../../genericframework/generic.view";
-import {EContainerView} from "../generic-container/e-container.view";
+import {EContainerView} from "../../genericframework/generic-container/e-container.view";
 
 @Component({
     selector: 'e-layout',

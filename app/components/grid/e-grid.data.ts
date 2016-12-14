@@ -1,4 +1,4 @@
-import {GenericContainerData} from "../generic-container/generic-container.data";
+import {GenericContainerData} from "../../genericframework/generic-container/generic-container.data";
 import {EComponent} from "../../genericframework/e.component";
 
 export class EGridData extends GenericContainerData {

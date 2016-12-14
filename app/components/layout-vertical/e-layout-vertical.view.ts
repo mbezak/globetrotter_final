@@ -4,7 +4,7 @@
 import {Component} from "@angular/core";
 import {GenericView} from "../../genericframework/generic.view";
 import {ELayoutVerticalData} from "./e-layout-vertical.data";
-import {EContainerView} from "../generic-container/e-container.view";
+import {EContainerView} from "../../genericframework/generic-container/e-container.view";
 
 
 

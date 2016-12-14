@@ -1,7 +1,7 @@
 import {Component} from "@angular/core";
 import {ELayoutGridData} from "./e-layout-grid.data";
 import {GenericView} from "../../genericframework/generic.view";
-import {EContainerView} from "../generic-container/e-container.view";
+import {EContainerView} from "../../genericframework/generic-container/e-container.view";
 
 @Component({
     selector: 'e-layout-grid',
