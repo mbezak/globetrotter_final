@@ -1,5 +1,5 @@
 {
-  "apiUrl" : "http://localhost:8033/api/",
+  "apiUrl" : "http://localhost:8037/api/",
   "initialEndpoint" : "gui/globetrotter/groups"
 }
 

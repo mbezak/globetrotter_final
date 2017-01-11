@@ -778,7 +778,12 @@ fieldset[disabled] .e-tabs .e-tab-active.active {
   max-height: 27px;
 }
 .e-expense-tile {
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 14px;
   color: #1389c8;
+  background-color: #f1f0f0;
   width: 144px;
   height: 144px;
   -webkit-box-sizing: border-box;
@@ -1526,22 +1531,9 @@ body {
   font-weight: 300;
   font-size: 14px;
   color: #252123;
-  background-color: #ffffff;
+  background-color: #f7f7f8;
   margin: 0;
   padding: 0;
-}
-@media (max-width: 993px) {
-  body {
-    background-color: #ffffff;
-  }
-}
-body .e-expense-tile {
-  font-family: Arial, Helvetica, sans-serif;
-  font-style: normal;
-  font-weight: 300;
-  font-size: 14px;
-  color: #1389c8;
-  background-color: #f1f0f0;
 }
 .loading {
   width: 100px;
